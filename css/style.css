@@ -200,7 +200,7 @@ header .main-title img{
 .slider .container{
     background-image: url(../images/slider-home--1.png);
     background-size: cover;
-    height: 350px;
+    min-height: 357px;
     background-origin: content-box;
     background-repeat: no-repeat;
 }
@@ -214,7 +214,7 @@ header .main-title img{
 .categories-itemes .container{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(150px ,1fr));
-    gap: 70px;
+    gap:  40px;
     
 }
 .categories-itemes .container .categories-iteme a img{
@@ -254,7 +254,7 @@ header .main-title img{
     overflow: hidden;
 }
 .ramadan-deals .ramdan-product .product-card {
-    min-width:250px ;
+    min-width:165px ;
 
 }
 .ramadan-deals .ramdan-product .product-card .image img{
