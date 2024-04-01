@@ -308,7 +308,7 @@ header .main-title img{
     padding: 50px 0 20px;
 }
 .slider-cream .container .row-1{
-    height: 250px;
+    min-height:200px;
     background-image: url(../images/catalog_charlotte.png);
     background-size:cover;
     background-origin: content-box;
