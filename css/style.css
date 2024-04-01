@@ -44,7 +44,7 @@ html{
 
 /* Start Header */
 header{
-    padding: 20px 0;
+    padding: 20px 0 15px;
     
 }
 header .container {
@@ -53,10 +53,7 @@ header .container {
 .row{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
-    
-    
+    align-items: center;  
 }
 .row .row-info{
     
@@ -125,46 +122,48 @@ header .main-title img{
     position: sticky;
     top: 0;
     background-color: #fff;
-    z-index: 100;
+    z-index: 50;
+    
 }
 
-.row-category .row ul{
+.row-category .row > ul{
+    
    min-width: 468px;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
 }
-.row-category .row ul li a
+.row-category .row > ul > li > a
 {
     padding: 20px;
     color: #000;
     position: relative;
 }
 
-.row-category .row ul:first-of-type li a{
-    font-size: 20px;
+.row-category  .row > ul:first-of-type > li > a{
+    font-size: 18px;
 }
-.row-category .row ul:first-of-type li a::before{
+.row-category  .row > ul:first-of-type >  li:not(:last-child) > a::before{
     content: "|";
     position: absolute;
     right: 0;
     
 }
-.row-category .row ul li a:after{
+.row-category .row > ul > li > a:after{
     content: "";
     position: absolute;
     background-color: #000;
-    bottom: 0;
+    bottom: -3px;
     height: 3px;
     width: 0;
     left: 0;
     transition: width 0.3s;
 }
-.row-category .row ul li a:hover:after{
+.row-category .row > ul > li > a:hover:after{
     width: 100%;
     
 }
-.row-category .row ul:nth-child(2) li:last-of-type  a:after{
+.row-category .row > ul:nth-child(2)  li:last-of-type  a:after{
     left: 15px;
     
 }
@@ -192,7 +191,52 @@ header .main-title img{
 .row-category .row ul:nth-child(2) li:nth-child(3) a img
 {
     margin-right: 10px;
-} 
+}
+ /*drroped  */
+ .row-category .drroped{
+    position: relative;
+ }
+  .row-category .drroped .drroped-menu{
+    position: absolute;
+    background-color: #fff;
+    width: 230px;
+    box-shadow: 0 0 10px rgb(0 0 0 /40%);
+    padding: 0 10px;
+    z-index: 100;
+    position: absolute;
+    top: calc( 100% + 18px);
+    visibility: hidden;
+    transition:     visibility  0.3s;
+  }
+.row-category .drroped:hover .drroped-menu{
+    visibility: visible;
+}
+    .row-category .drroped .drroped-menu li a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color:#777;
+        position: relative;
+        padding: 20px 0;
+        font-size: 14px;
+        
+    }
+     .row-category .drroped .drroped-menu li:not(:last-child) a{
+        padding-bottom: 20px;
+     }
+     .row-category .drroped .drroped-menu li a .info{
+     }
+     .row-category .drroped .drroped-menu li a .info .title{
+        margin-left: 20px;
+     }
+     .row-category .drroped .drroped-menu li a   i{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        display: flex;
+        align-items: flex-end;
+        font-size: 15px;
+     }
 /* Start Slider */
 .slider{
     margin: 30px 0;
