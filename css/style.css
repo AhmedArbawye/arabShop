@@ -69,7 +69,7 @@ header .container .search{
     position: relative;
     background-color: #f1eeee;
     flex: 1;
-    margin: 0 100px;
+    margin: 0 50px;
 }
 header .container input{
     width: 100%;
@@ -107,14 +107,15 @@ header .container input:focus + i
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 468px ;
+    width: 352px ;
 }
 header .main-title img{
-    width: 35px;
-    margin-right: 10px;
+    width: 40px;
+    margin-right: 10px; 
+
 }
 .main-title .medal-title{
-    font-size: 30px;
+    font-size: 21px;
 }
 /* row-category */
 .row-category {
@@ -126,16 +127,21 @@ header .main-title img{
     
 }
 
-.row-category .row > ul{
+.row-category .row > ul {
     
-   min-width: 468px;
+   
     display: flex;
     justify-content: space-between;
     background-color: #fff;
 }
+.row-category .row > ul:nth-child(2){
+    display: flex;
+    width: 352px;
+    padding-left: 8px;
+}
 .row-category .row > ul > li > a
 {
-    padding: 20px;
+    padding: 18px;
     color: #000;
     position: relative;
 }
@@ -153,14 +159,16 @@ header .main-title img{
     content: "";
     position: absolute;
     background-color: #000;
-    bottom: -3px;
+    bottom: 2px;
     height: 3px;
     width: 0;
     left: 0;
     transition: width 0.3s;
+    
 }
 .row-category .row > ul > li > a:hover:after{
-    width: 100%;
+    width:100%
+
     
 }
 .row-category .row > ul:nth-child(2)  li:last-of-type  a:after{
@@ -181,7 +189,7 @@ header .main-title img{
     margin-right: 5px;
 } 
 .row-category .row ul:nth-child(2)  a img{
-    width: 30px;
+    width: 20px;
 }
 .row-category .row ul:nth-child(2) li a {
     display: flex;
@@ -191,6 +199,101 @@ header .main-title img{
 .row-category .row ul:nth-child(2) li:nth-child(3) a img
 {
     margin-right: 10px;
+}
+/* row-categories */
+.row-category .info{
+    position: relative;
+}
+.row-category .info li:not(:nth-child(n+4)) > a::before
+{
+    position: absolute;
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.row-category .info .droppin{
+    width: 352px;
+    padding:  20px ;
+    box-shadow: 0 0 5px rgb(0 0 0 /40%);
+    position: absolute;
+    background-color: #fff;
+    z-index: 100;
+    visibility: hidden;
+    display: none;
+    transition: visibility 0.3s , display 0.3s;
+}
+.row-category .info .dropped:hover .droppin{
+    display: block;
+    visibility: visible;
+}
+.row-category .info .droppin form{
+    display: flex;
+    justify-content: space-between;
+}
+.row-category .info  .droppin.country form{
+    flex-direction: column;
+}
+.row-category .info  .droppin.country .Country-item{
+    display: flex;
+    align-items: center;
+}
+.row-category .info  .droppin.country .Country-item input{
+    margin-right: 5px;
+}
+.row-category .info  .droppin.country .Country-item:not(:first-child){
+   padding-top: 20px ;
+}
+.row-category .info .droppin .lang-title{
+    text-transform: capitalize;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.row-category .info .droppin form img{
+    width: 25px;
+    margin:0  5px;
+}
+
+.row-category .info .droppin form input{
+    width: 20px;
+    height: 20px;
+
+}
+
+.row-category .info .droppin form .lang-item{
+    display: flex;
+    align-items: center;
+}
+.row-category .info .droppin.country {
+    width:300px;
+    left: 5px;
+    flex-direction: column;
+}
+.row-category .info .droppin.login{
+    left: 0;
+}
+.row-category .info .droppin.login > a{
+    background-color: #000;
+    color: #fff;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 6px;
+}
+.row-category .info .droppin.login p{
+    display: flex;
+    padding:0 10px ;
+}
+.row-category .info .droppin.login p a{
+    color: #777;
+    margin-left: 5px;
+    font-size: 16;
 }
  /*drroped  */
  .row-category .drroped{
@@ -224,8 +327,7 @@ header .main-title img{
      .row-category .drroped .drroped-menu li:not(:last-child) a{
         padding-bottom: 20px;
      }
-     .row-category .drroped .drroped-menu li a .info{
-     }
+
      .row-category .drroped .drroped-menu li a .info .title{
         margin-left: 20px;
      }
@@ -256,10 +358,12 @@ header .main-title img{
     padding:50px 0 ;
 }
 .categories-itemes .container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(150px ,1fr));
-    gap:  40px;
-    
+    display: flex;
+    justify-content: space-between;
+
+}
+.categories-itemes .container .categories-iteme{
+    flex-basis: 150px;
 }
 .categories-itemes .container .categories-iteme a img{
     border-radius: 50%;
