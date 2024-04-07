@@ -45,6 +45,7 @@ html{
 /* Start Header */
 body{
     position: relative;
+    overflow: hidden;
 }
 
 .regist{
@@ -116,14 +117,16 @@ body{
 
 }
 .content-container .registration  .full-w ,
-.registration input[type="password"]
+.content-container .registration input[type="password"]
 {
+    display: block;
     width: 100%;
     padding: 10px 20px ;
 }
 .registration .pas{
     position: relative;
 }
+
 .registration .pas span{
     position: absolute;
     right: 20px;
