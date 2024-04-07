@@ -43,9 +43,177 @@ html{
 /* End Main Rules */
 
 /* Start Header */
+body{
+    position: relative;
+}
+
+.regist{
+    box-shadow: 0 0 5px rgb(0 0 0/40%);
+    width: 500px;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    padding: 15px 15px 0;
+    background-color: #e6e6e6;
+    z-index: 200;
+    transition: right 0.3s ;
+  
+}
+.regist .content-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+}
+.regist >span{
+    position: relative;
+    display: block;
+    padding: 0 20px  25px;
+    cursor: pointer;
+}
+.regist >span i{
+    height: 20px;
+
+}
+.regist > span::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    right: -15px;
+    width: calc( 100%  + 30px);
+    bottom: 0;
+    background-color: #b3aeae5d;
+
+}
+.content-container .logo{
+    margin:10px 0 20px;
+   
+}
+
+.regist-main-title{
+    font-size: 14px;
+    font-weight: normal;
+    
+}
+.content-container .registration{
+   
+    border-radius: 6px;
+    margin: 30px 0;
+   
+   
+}
+.content-container .registration .form-body{
+        background-color: #fff;
+
+}
+.registration input{
+    border: 0;
+    margin:8px 0;
+}
+.registration input:focus{
+    outline: none;
+
+}
+.content-container .registration  .full-w ,
+.registration input[type="password"]
+{
+    width: 100%;
+    padding: 10px 20px ;
+}
+.registration .pas{
+    position: relative;
+}
+.registration .pas span{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color:rgba(0, 0, 255, 0.774);
+    font-size: 14px;
+    font-weight: 500;
+
+}
+.registration .gender{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.registration .gender::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    background-color: #ddddddc2;
+}
+.registration .gendar-title{
+    font-size: 14px;
+    color: #9e9a9a;
+    font-weight: normal;
+}
+.registration .tel{
+    position: relative;
+}
+.registration .tel input[type="text"] {
+    padding-left: 95px ;
+    display: block;
+
+}
+.registration .tel .tel-info{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    
+}
+.registration .tel .tel-info img{
+    width: 30px;
+    height: 20px;
+    margin-right: 5px;
+}
+.terms-condtion{
+    padding: 20px ;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+}
+.regist-footer{
+    padding: 40px 20px 0;
+    background-color: #e6e6e6;
+
+}
+.regist-footer span{
+position: relative;
+display: flex;
+padding-left: 25px;
+}
+.regist-footer span::before{
+    content: "\40";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    color: #000;
+}
+.regist-footer input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
 header{
     padding: 20px 0 15px;
-    
 }
 header .container {
     position: relative;
