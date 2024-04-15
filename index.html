@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <div style="display: none;" class="disappear" id="disappear"></div>
     <div class="regist" id="regest">
         <span ><i class="fa-solid fa-x " id="close-reg"></i></span>
         <div class="content-container">
@@ -50,7 +51,8 @@
                     <input class="full-w num" type="email" name="email" id="email" placeholder="email">
                     <div class="pas">
                         <input type="password" name="" id="pasd" placeholder="password">
-                        <span onclick="show()">Show</span>
+                        <span id="show" ><i class="fa-regular fa-eye"></i></span>
+                        <span id="hide" style="display: none;" ><i class="fa-regular fa-eye-slash"></i></span>
                     </div>
                     <input type="text" class="full-w" name="" id="" placeholder="Referal code (optiona)">
                     <div class="terms-condtion">

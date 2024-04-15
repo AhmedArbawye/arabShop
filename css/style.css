@@ -46,6 +46,18 @@ html{
 body{
     position: relative;
     overflow: hidden;
+    
+}
+.disappear{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width:0;
+    background-color: #050505d5;
+    left: 0;
+    top: 0;
+    z-index: 199;
+    transition: width 0.3s;
 }
 
 .regist{
@@ -58,19 +70,20 @@ body{
     background-color: #e6e6e6;
     z-index: 200;
     transition: right 0.3s ;
-  
+    
+    
+}
+.regist-header h2{
+ margin-bottom:10px ;
 }
 .regist .content-container {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: fit-content;
+    height: 100vh;
 }
 .regist >span{
     position: relative;
     display: block;
-    padding: 0 20px  25px;
+    padding: 0 20px  15px;
     cursor: pointer;
 }
 .regist >span i{
@@ -98,11 +111,8 @@ body{
     
 }
 .content-container .registration{
-   
     border-radius: 6px;
-    margin: 30px 0;
-   
-   
+    margin-top : 20px;
 }
 .content-container .registration .form-body{
         background-color: #fff;
@@ -116,8 +126,7 @@ body{
     outline: none;
 
 }
-.content-container .registration  .full-w ,
-.content-container .registration input[type="password"]
+.content-container .registration  .full-w 
 {
     display: block;
     width: 100%;
@@ -127,16 +136,20 @@ body{
     position: relative;
 }
 
+.pas input{
+     padding-left:  20px;
+}
+
 .registration .pas span{
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color:rgba(0, 0, 255, 0.774);
+    color:rgba(16, 16, 17, 0.774);
     font-size: 14px;
     font-weight: 500;
-
+   
 }
 .registration .gender{
     padding: 10px 20px;
@@ -188,8 +201,8 @@ body{
     font-weight: 500;
 }
 .regist-footer{
-    padding: 40px 20px 0;
-    background-color: #e6e6e6;
+    padding: 20px 20px 0;
+    /* background-color: #e6e6e6; */
 
 }
 .regist-footer span{
@@ -517,7 +530,7 @@ header .main-title img{
 .slider .container{
     background-image: url(../images/slider-home--1.png);
     background-size: cover;
-    min-height: 357px;
+    min-height: 365px;
     background-origin: content-box;
     background-repeat: no-repeat;
 }
