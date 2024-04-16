@@ -8,10 +8,12 @@ reg.onclick = function() {
     regest.style.right = 0;
     disap.style.display = "block";
     disap.style.width = "100%";
+    document.body.style.overflow = "hidden";
     closeReg.onclick = function () {
         regest.style.right = "-100%";
         disap.style.display = "none";
         disap.style.width = "0";
+        document.body.style.overflow = "auto";
     }
 }
 

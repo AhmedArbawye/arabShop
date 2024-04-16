@@ -45,8 +45,15 @@ html{
 /* Start Header */
 body{
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     
+}
+.out{
+    position: absolute;
+    overflow: hidden;
+    height: 100vh;
+    width: 500px;
+    right: 0;
 }
 .disappear{
     content: "";
@@ -68,7 +75,7 @@ body{
     right: -100%;
     padding: 15px 15px 0;
     background-color: #e6e6e6;
-    z-index: 200;
+    z-index: 206;
     transition: right 0.3s ;
     
     
